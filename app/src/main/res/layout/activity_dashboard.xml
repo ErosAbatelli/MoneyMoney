@@ -29,26 +29,40 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <it.eros.moneymoney.models.NavigationImageButton
-                android:layout_height="match_parent"
-                 android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/dashboard"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/ic_ripple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:text="Dashboard"
-                app:image="@drawable/ic_home">
-            </it.eros.moneymoney.models.NavigationImageButton>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAllCaps="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="?android:attr/textColor"
+                android:src="@drawable/ic_home_pressed"/>
 
-            <it.eros.moneymoney.models.NavigationImageButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/stats"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/ic_ripple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:text="Statistiche"
-                app:image="@drawable/ic_stats">
-            </it.eros.moneymoney.models.NavigationImageButton>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAllCaps="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="?android:attr/textColor"
+                android:src="@drawable/ic_stats" />
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -56,21 +70,35 @@
                 android:visibility="invisible">
             </TextView>
 
-            <it.eros.moneymoney.models.NavigationImageButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/profile"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/ic_ripple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:text="Profilo"
-                app:image="@drawable/ic_profile">
-            </it.eros.moneymoney.models.NavigationImageButton>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAllCaps="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="?android:attr/textColor"
+                android:src="@drawable/ic_profile" />
 
-            <it.eros.moneymoney.models.NavigationImageButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/settings"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/ic_ripple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:text="Impostazioni"
-                app:image="@drawable/ic_settings">
-            </it.eros.moneymoney.models.NavigationImageButton>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAllCaps="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="?android:attr/textColor"
+                android:src="@drawable/ic_settings" />
 
         </LinearLayout>
 
