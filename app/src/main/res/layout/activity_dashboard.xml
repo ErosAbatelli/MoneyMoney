@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <ImageButton
                 android:id="@+id/dashboard"
                 style="?android:attr/borderlessButtonStyle"
                 android:background="@drawable/ic_ripple"
@@ -39,8 +39,8 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:textColor="?android:attr/textColor">
-            </TextView>
+                android:textColor="?android:attr/textColor"
+                android:src="@drawable/ic_home" />
 
             <TextView
                 android:id="@+id/stats"
@@ -52,7 +52,9 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:textColor="?android:attr/textColor">
+                android:textColor="?android:attr/textColor"
+                android:text="Statistiche"
+                app:drawableTopCompat="@drawable/ic_stats">
             </TextView>
 
             <TextView
@@ -76,7 +78,9 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:textColor="?android:attr/textColor">
+                android:textColor="?android:attr/textColor"
+                android:text="Profilo"
+                app:drawableTopCompat="@drawable/ic_profile">
             </TextView>
 
             <TextView
@@ -88,7 +92,9 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:textColor="?android:attr/textColor">
+                android:textColor="?android:attr/textColor"
+                android:text="Impostazioni"
+                app:drawableTopCompat="@drawable/ic_settings">
             </TextView>
 
         </LinearLayout>
@@ -99,6 +105,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_anchor="@id/bottomAppBar" />
+        app:layout_anchor="@id/bottomAppBar"
+        android:src="@drawable/ic_add"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
