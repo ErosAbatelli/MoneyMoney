@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation image button attributes -->
+    <declare-styleable name="NavigationImageButton">
+        <attr name="image" format="reference"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
+</resources>
