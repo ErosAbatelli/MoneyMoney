@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inserisci i dati"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textSpesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spesa"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/switchCompat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textIncasso"
+            app:layout_constraintStart_toEndOf="@+id/textSpesa"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textIncasso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incasso"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/switchCompat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:elevation="7dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/text_background"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:textAllCaps="false"
+        android:drawableEnd="@drawable/ic_calendar"
+        app:backgroundTint="?attr/generalBackGroundColor"
+        android:textColor="?android:attr/textColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Importo"
+            android:layout_weight="2"/>
+
+        <Spinner
+            android:id="@+id/spinnerCurrency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:entries="@array/currency"
+            android:spinnerMode="dialog"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        style="@style/MyOutlinedBoxDense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_edit"
+            android:drawablePadding="8dp"
+            android:textColorHighlight="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:inputType="textVisiblePassword"
+            android:imeOptions="actionDone"
+            android:hint="Descrizione" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textDefaultCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categoria di default"
+        android:elevation="7dp"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/text_background"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:textAllCaps="false"
+        app:backgroundTint="?attr/generalBackGroundColor"
+        android:textColor="?android:attr/textColor" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTextPrimaryCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        style="@style/MyOutlinedBoxDense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPrimaryCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_edit"
+            android:drawablePadding="8dp"
+            android:textColorHighlight="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:inputType="textVisiblePassword"
+            android:imeOptions="actionDone"
+            android:hint="Categoria Primaria" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTextSecondaryCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        style="@style/MyOutlinedBoxDense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSecondaryCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_edit"
+            android:drawablePadding="8dp"
+            android:textColorHighlight="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:inputType="textVisiblePassword"
+            android:imeOptions="actionDone"
+            android:hint="Categoria secondaria" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:elevation="7dp"
+        app:cornerRadius="40dp"
+        app:backgroundTint="?attr/backgroundColorBtn"
+        android:fontFamily="sans-serif"
+        android:paddingVertical="13dp"
+        android:paddingHorizontal="40dp"
+        android:textAllCaps="false"
+        android:text="Salva"
+        android:textColor="?android:attr/textColor"
+        android:textSize="17sp" />
+
+
+</LinearLayout>

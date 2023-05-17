@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/mainCoordinator"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -103,6 +104,23 @@
         </LinearLayout>
 
     </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:elevation="7dp"
+        app:layout_anchor="@id/bottomAppBar"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <include layout="@layout/activity_add_inputs" />
+
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

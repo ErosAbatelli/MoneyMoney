@@ -10,7 +10,7 @@ interface InputsDao {
     fun getAllInputs(): List<Inputs>
 
     @Query("SELECT * FROM inputs WHERE inputsId=:inputsId")
-    fun getDeviceById(inputsId: Int): Inputs
+    fun getDeviceById(inputsId: Long): Inputs
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDevice(inputs: Inputs)

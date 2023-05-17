@@ -12,10 +12,25 @@
 
         <item name="backgroundColorBtn">@color/backgroundColorBtnLight</item>
         <item name="backgroundDisableColor">@color/backgroundDisableColorLight</item>
+        <item name="generalBackGroundColor">@color/generalBackGroundColorLight</item>
+        <item name="dividerColor">@color/dividerLight</item>
+        <item name="pressedBtn">@color/pressedBtnLight</item>
 
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+    <style name="MyOutlinedBoxDense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">?attr/generalBackGroundColor</item>
+        <item name="hintTextColor">?android:attr/textColor</item>
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>
+        <item name="boxStrokeColor">?android:attr/textColor</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
     </style>
 </resources>

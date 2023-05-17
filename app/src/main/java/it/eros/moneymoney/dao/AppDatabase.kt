@@ -5,7 +5,11 @@ import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import it.eros.moneymoney.dao.model.DefaultCategory
 import it.eros.moneymoney.dao.model.Inputs
+import it.eros.moneymoney.dao.model.PrimaryCategory
+import it.eros.moneymoney.dao.model.SecondaryCategory
+import it.eros.moneymoney.dao.query.CategoryDao
 import it.eros.moneymoney.dao.query.InputsDao
 import java.util.concurrent.Executors
 
@@ -16,6 +20,9 @@ const val DATABASE_NAME = "costs-db"
 @Database(
     entities = [
         Inputs::class,
+        DefaultCategory::class,
+        SecondaryCategory::class,
+        PrimaryCategory::class
     ],
     version = 1,
     exportSchema = false
@@ -23,7 +30,7 @@ const val DATABASE_NAME = "costs-db"
 abstract class AppDatabase: RoomDatabase() {
 
     abstract fun inputsDao(): InputsDao
-
+    abstract fun categoryDao(): CategoryDao
 
     companion object {
         private var TAG = AppDatabase::class.java.simpleName

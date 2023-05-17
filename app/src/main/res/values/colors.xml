@@ -9,6 +9,9 @@
 
     <color name="backgroundDisableColorLight">#3e3e42</color>
     <color name="backgroundColorBtnLight">#1565C0</color>
+    <color name="generalBackGroundColorLight">#fff</color>
+    <color name="dividerLight">#14000000</color>
+    <color name="pressedBtnLight">#C0C8CC</color>
 
     <color name="black">#000000</color>
     <color name="gray">#212121</color>

@@ -2,5 +2,8 @@
 <resources>
     <attr name="backgroundColorBtn" format="reference"/>
     <attr name="backgroundDisableColor" format="reference" />
+    <attr name="generalBackGroundColor" format="reference" />
+    <attr name="dividerColor" format="reference" />
+    <attr name="pressedBtn" format="reference" />
 
 </resources>

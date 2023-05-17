@@ -42,6 +42,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
 
+    //SwipeRefresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
     //Room
     implementation 'androidx.room:room-ktx:2.3.0'
     implementation "androidx.room:room-rxjava2:2.3.0"
