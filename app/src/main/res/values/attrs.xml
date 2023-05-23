@@ -3,4 +3,12 @@
     <attr name="backgroundColorBtn" format="reference"/>
     <attr name="backgroundDisableColor" format="reference" />
 
+    <!-- Navigation image button attributes -->
+    <declare-styleable name="SwitchOnOffText">
+        <attr name="text_before" format="string"/>
+        <attr name="text_after" format="string"/>
+        <attr name="switch_on_color" format="color"/>
+        <attr name="switch_off_color" format="color"/>
+    </declare-styleable>
+
 </resources>

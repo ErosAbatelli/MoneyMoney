@@ -12,33 +12,140 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+
+    <it.eros.moneymoney.custom_components.SwitchOnOffText
         android:id="@+id/switcher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textOff="off"
-        android:showText="true"
-        android:textOn="on" />
+        app:switch_on_color="@color/blue"
+        app:switch_off_color="@color/blue"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/saveDevice"
-        android:layout_gravity="center"
+        android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cornerRadius="40dp"
-        android:enabled="false"
+        app:cornerRadius="30dp"
         app:backgroundTint="@drawable/button_background"
         android:fontFamily="sans-serif"
         android:paddingVertical="17dp"
         android:paddingHorizontal="30dp"
         android:textAllCaps="false"
-        android:text="Salva dispositivo"
+        android:text="Amount"
         android:textColor="?android:attr/textColor"
-        android:textSize="17sp"/>
+        android:textSize="17sp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+        <Spinner
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cornerRadius="30dp"
+            app:backgroundTint="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:layout_margin="5dp"
+            android:textColor="?android:attr/textColor"
+            android:textSize="17sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="30dp"
+            app:backgroundTint="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:paddingVertical="17dp"
+            android:paddingHorizontal="30dp"
+            android:textAllCaps="false"
+            android:text="Date"
+            android:textColor="?android:attr/textColor"
+            android:textSize="17sp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="30dp"
+            app:backgroundTint="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:paddingVertical="17dp"
+            android:paddingHorizontal="30dp"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
+            android:text="Account"
+            android:textColor="?android:attr/textColor"
+            android:textSize="17sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingVertical="17dp"
+        android:paddingHorizontal="30dp"
+        android:layout_margin="5dp"
+        android:hint="Description"
+        android:textColor="?android:attr/textColor"
+        android:textSize="17sp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <Spinner
+        android:id="@+id/default_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@drawable/button_background"
+        android:fontFamily="sans-serif"
+        android:layout_margin="5dp"
+        android:textColor="?android:attr/textColor"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <Spinner
+        android:id="@+id/primary_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@drawable/button_background"
+        android:fontFamily="sans-serif"
+        android:layout_margin="5dp"
+        android:textColor="?android:attr/textColor"
+        android:layout_weight="1"/>
+
+    <Spinner
+        android:id="@+id/secondary_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@drawable/button_background"
+        android:fontFamily="sans-serif"
+        android:layout_margin="5dp"
+        android:textColor="?android:attr/textColor"
+        android:layout_weight="1"/>
 
 </LinearLayout>

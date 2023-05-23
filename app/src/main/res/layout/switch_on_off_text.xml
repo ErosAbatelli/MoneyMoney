@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Text -->
+    <TextView
+        android:id="@+id/text_before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textAlignment="textEnd"
+        android:text="On">
+    </TextView>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switcher_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <!-- Text -->
+    <TextView
+        android:id="@+id/text_after"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textAlignment="textStart"
+        android:text="Off">
+    </TextView>
+
+</LinearLayout>
