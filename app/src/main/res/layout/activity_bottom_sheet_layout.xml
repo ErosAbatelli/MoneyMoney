@@ -1,113 +1,142 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Aggiungi spesa o incasso"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
 
+        android:layout_weight="1"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:text="Aggiungi spesa o incasso"/>
 
     <it.eros.moneymoney.custom_components.SwitchOnOffText
         android:id="@+id/switcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:switch_on_color="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center"
+
+        android:layout_weight="1"
         app:switch_off_color="@color/blue"
-        android:layout_weight="1"/>
+        app:switch_on_color="@color/blue" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cornerRadius="30dp"
-        app:backgroundTint="@drawable/button_background"
-        android:fontFamily="sans-serif"
-        android:paddingVertical="17dp"
-        android:paddingHorizontal="30dp"
-        android:textAllCaps="false"
-        android:text="Amount"
-        android:textColor="?android:attr/textColor"
-        android:textSize="17sp"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
         android:layout_weight="1"
-        android:layout_gravity="center"/>
+
+        android:orientation="horizontal"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background"
+
+            android:fontFamily="sans-serif"
+            android:textColor="?android:attr/textColor"
+
+            android:padding="10dp"
+
+            android:hint="Amount"
+
+            android:textSize="17sp" />
 
         <Spinner
             android:id="@+id/currency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
             android:layout_gravity="center"
-            app:cornerRadius="30dp"
-            app:backgroundTint="@drawable/button_background"
-            android:fontFamily="sans-serif"
-            android:layout_margin="5dp"
-            android:textColor="?android:attr/textColor"
-            android:textSize="17sp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
 
-        <com.google.android.material.button.MaterialButton
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
+        android:layout_weight="1"
+
+        android:orientation="horizontal"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cornerRadius="30dp"
-            app:backgroundTint="@drawable/button_background"
-            android:fontFamily="sans-serif"
-            android:paddingVertical="17dp"
-            android:paddingHorizontal="30dp"
-            android:textAllCaps="false"
-            android:text="Date"
-            android:textColor="?android:attr/textColor"
-            android:textSize="17sp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cornerRadius="30dp"
-            app:backgroundTint="@drawable/button_background"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background"
             android:fontFamily="sans-serif"
-            android:paddingVertical="17dp"
-            android:paddingHorizontal="30dp"
-            android:textAllCaps="false"
-            android:layout_margin="5dp"
-            android:text="Account"
+            android:hint="Date"
             android:textColor="?android:attr/textColor"
-            android:textSize="17sp"
-            android:layout_weight="1"/>
+
+            android:padding="10dp"
+
+            android:textSize="17sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background"
+            android:fontFamily="sans-serif"
+            android:hint="Account"
+            android:textColor="?android:attr/textColor"
+
+            android:padding="10dp"
+
+            android:textSize="17sp" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:paddingVertical="17dp"
-        android:paddingHorizontal="30dp"
-        android:layout_margin="5dp"
-        android:hint="Description"
-        android:textColor="?android:attr/textColor"
-        android:textSize="17sp"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
 
+        android:layout_weight="1"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:background="@drawable/rounded_background"
+        android:fontFamily="sans-serif"
+        android:textColor="?android:attr/textColor"
+
+        android:padding="10dp"
+
+        android:hint="Description" />
+
+    <!-- Line -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -116,13 +145,14 @@
     <Spinner
         android:id="@+id/default_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@drawable/button_background"
-        android:fontFamily="sans-serif"
-        android:layout_margin="5dp"
-        android:textColor="?android:attr/textColor"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
 
+        android:layout_weight="1"
+
+        android:fontFamily="sans-serif"
+        android:textColor="?android:attr/textColor" />
+
+    <!-- Line -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -131,21 +161,21 @@
     <Spinner
         android:id="@+id/primary_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@drawable/button_background"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"
+
         android:fontFamily="sans-serif"
-        android:layout_margin="5dp"
-        android:textColor="?android:attr/textColor"
-        android:layout_weight="1"/>
+        android:textColor="?android:attr/textColor" />
 
     <Spinner
         android:id="@+id/secondary_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@drawable/button_background"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"
+
         android:fontFamily="sans-serif"
-        android:layout_margin="5dp"
-        android:textColor="?android:attr/textColor"
-        android:layout_weight="1"/>
+        android:textColor="?android:attr/textColor" />
 
 </LinearLayout>

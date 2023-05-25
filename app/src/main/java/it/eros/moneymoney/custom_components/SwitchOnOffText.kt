@@ -33,10 +33,13 @@ class SwitchOnOffText (
             if(isChecked) {
                 textAfterComponent.visibility = View.VISIBLE
                 textBeforeComponent.visibility = View.INVISIBLE
-                switchComponent.setBackgroundColor(customAttributesStyle.getColor(3, 0));
+                // TODO Do it with reference
+                switchComponent.setBackgroundColor(Color.RED)
             }else{
                 textAfterComponent.visibility = View.INVISIBLE
                 textBeforeComponent.visibility = View.VISIBLE
+                // TODO Do it with reference
+                switchComponent.setBackgroundColor(Color.GREEN)
             }
         })
     }

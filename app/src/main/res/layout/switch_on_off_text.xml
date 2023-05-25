@@ -9,17 +9,18 @@
         android:id="@+id/text_before"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center"
+
         android:textAlignment="textEnd"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
         android:text="On">
     </TextView>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switcher_custom"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center" />
 
@@ -28,9 +29,11 @@
         android:id="@+id/text_after"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center"
+
         android:textAlignment="textStart"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
         android:text="Off">
     </TextView>
 
